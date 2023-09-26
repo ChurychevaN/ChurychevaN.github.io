@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Time interval</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Time interval</h1>
+
+    <div class="change-date">
+      <label>
+        <h3>Start Date:</h3>
+      <input type="date" class="start-date" max="end_date" />
+    </label>
+
+      <label>
+        <h3>End Date:</h3>
+      <input type="date" class="end-date" min="start_date" disabled />
+    </label>
+
+      <label>
+        <h3>Time interval presets:</h3>
+      <select class="preset-interval">
+        <option value="" selected disabled hidden>Select interval</option> 
+        <option value="week">Week</option>  
+        <option value="month">Month</option>
+      </select>
+    </label>
+
+      <label>
+        <h3>Workdays Option:</h3>
+      <select class="workdays-options">
+        <option value="" selected disabled hidden>Select days</option>
+        <option value="weekdays">Weekdays</option>
+        <option value="weekends">Weekends</option>
+      </select>
+    </label>
+
+      <label>
+        <h3>Calculation Option:</h3>
+      <select class="time-options">
+        <option value="days">Days</option>
+        <option value="hours">Hours</option>
+        <option value="minutes">Minutes</option>
+        <option value="seconds">Seconds</option>
+      </select>
+    </label>
+
+      <button class="calculate-batton" disabled>Calculate</button>
+      <br /><br />
+      
+      <span class="result-str"></span>
+      <br /><br />
+
+      <table class="result-table">
+        <thead>
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody class="results-table-body">
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+  <div id="app"></div>
+  <script src="index.js"></script>
+</body>
+
+</html>
